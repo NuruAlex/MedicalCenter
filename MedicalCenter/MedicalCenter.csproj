@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E96D918-80EF-42B6-8446-B08532F582C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MedicalCenter</RootNamespace>
+    <AssemblyName>MedicalCenter</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MedicalCenter.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbountProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbountProgram.Designer.cs">
+      <DependentUpon>AbountProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliary classes\AccountantReport.cs" />
+    <Compile Include="Auxiliary classes\Sale.cs" />
+    <Compile Include="CustomControls\CustomDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Doctors\AppointmentReportInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\AppointmentReportInformation.Designer.cs">
+      <DependentUpon>AppointmentReportInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctors\DoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors\DoctorForm.Designer.cs">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliary classes\UIHelper.cs" />
+    <Compile Include="Auxiliary classes\AppointmentHelper.cs" />
+    <Compile Include="Auxiliary classes\EmailManager.cs" />
+    <Compile Include="Auxiliary classes\Day.cs" />
+    <Compile Include="Auxiliary classes\Drug.cs" />
+    <Compile Include="Auxiliary classes\Theme.cs" />
+    <Compile Include="Auxiliary classes\ProgramInfo.cs" />
+    <Compile Include="Staffs\IStaff.cs" />
+    <Compile Include="Staffs\StaffManager.cs" />
+    <Compile Include="Reseptionists\ReseptionistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reseptionists\ReseptionistForm.Designer.cs">
+      <DependentUpon>ReseptionistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\Accountant.cs" />
+    <Compile Include="Accountants\AccountantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accountants\AccountantForm.Designer.cs">
+      <DependentUpon>AccountantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\Admin.cs" />
+    <Compile Include="Admins\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admins\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliary classes\Appointment.cs" />
+    <Compile Include="Auxiliary classes\DataBase.cs" />
+    <Compile Include="Staffs\Doctor.cs" />
+    <Compile Include="Staffs\HeadPhysician.cs" />
+    <Compile Include="HeadPhysicians\HeadPhysicianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeadPhysicians\HeadPhysicianForm.Designer.cs">
+      <DependentUpon>HeadPhysicianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auxiliary classes\WorkSchedule.cs" />
+    <Compile Include="Auxiliary classes\Validator.cs" />
+    <Compile Include="Verification\KeyWordConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verification\KeyWordConfirmation.Designer.cs">
+      <DependentUpon>KeyWordConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Patient.cs" />
+    <Compile Include="Patients\PatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\PatientForm.Designer.cs">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Auxiliary classes\DoctorReport.cs" />
+    <Compile Include="Staffs\Reseptionist.cs" />
+    <Compile Include="Users\UserManager.cs" />
+    <Compile Include="Verification\UserSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verification\UserSelection.Designer.cs">
+      <DependentUpon>UserSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verification\ConfirmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verification\ConfirmEmail.Designer.cs">
+      <DependentUpon>ConfirmEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verification\PatientEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verification\PatientEnter.Designer.cs">
+      <DependentUpon>PatientEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verification\PatientRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verification\PatientRegistration.Designer.cs">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verification\StaffEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Verification\StaffEnter.Designer.cs">
+      <DependentUpon>StaffEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Verification\VerificationManager.cs" />
+    <EmbeddedResource Include="AbountProgram.resx">
+      <DependentUpon>AbountProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accountants\AccountantForm.resx">
+      <DependentUpon>AccountantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admins\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\CustomDateTimePicker.resx">
+      <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\AppointmentReportInformation.resx">
+      <DependentUpon>AppointmentReportInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctors\DoctorForm.resx">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeadPhysicians\HeadPhysicianForm.resx">
+      <DependentUpon>HeadPhysicianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\PatientForm.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reseptionists\ReseptionistForm.resx">
+      <DependentUpon>ReseptionistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verification\UserSelection.resx">
+      <DependentUpon>UserSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verification\KeyWordConfirmation.resx">
+      <DependentUpon>KeyWordConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verification\ConfirmEmail.resx">
+      <DependentUpon>ConfirmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verification\PatientEnter.resx">
+      <DependentUpon>PatientEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verification\PatientRegistration.resx">
+      <DependentUpon>PatientRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Verification\StaffEnter.resx">
+      <DependentUpon>StaffEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeniedDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuccessDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnlockDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnlockLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeniedLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExitLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomeLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LightSwitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LockDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuccessLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkSwitch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MakeAnAppointmenLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MakeAnAppointmentDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuDark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalendarLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalendarDark.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
